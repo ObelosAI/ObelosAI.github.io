@@ -1,0 +1,2 @@
+{ "applinks": { "details": [ { "appIDs": ["3GLHKCRGX7.com.malldrop.app"],
+  "components": [ { "/": "/c/*" }, { "/": "/p/*" } ] } ] } }

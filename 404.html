@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MallDrop</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main id="content">
+<h1>Page not found</h1>
+<p><a href="/">Go to the MallDrop home page</a></p>
+</main>
+<script>
+(function () {
+  var m = location.pathname.match(/^\/(c|p)\/([0-9a-fA-F-]{36})\/?$/);
+  if (!m) return;
+  var href = "malldrop://" + m[1] + "/" + m[2].toLowerCase();
+  document.getElementById("content").innerHTML =
+    '<h1>MallDrop</h1>' +
+    '<p class="meta">This link opens in the MallDrop app. Sign in to view it.</p>' +
+    '<p><a class="button" id="open" href="">Open in MallDrop</a></p>' +
+    '<p class="meta">Get MallDrop: coming soon to the App Store.</p>';
+  document.getElementById("open").setAttribute("href", href);
+})();
+</script>
+</body>
+</html>
